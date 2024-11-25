@@ -12,30 +12,29 @@ Modal.style.display='none';
 const Grid         = document.querySelector('.image-grid'  );
 // Search & DisPlay EndPoint Data:
 async function displayImages(){const data =   await fetchImages();
-    try {const postsList = data.map(item  => {return
-        `
-        <article data-description='${item.description}'>
-            <figure>
-                <img src='${item.imgURL}' alt='${item.alt}'/>
-            </figure>
-        </article>
-        `}).join('');
-        Grid.insertAdjacentHTML('beforeend', postsList)
-        // Add Click Events for Each Image:
-        addImageClickEvents()}
-        catch (error) {console.error('Error Populating Page.', error)}}
+    try {const postsList = data.map( item => {return`
+            <article data-description='${item.description}'>
+                <figure>
+                    <img src='${item.imgURL}' alt='${item.alt}'/>
+                </figure>
+            </article>
+            `}).join('');
+            Grid.insertAdjacentHTML('beforeend', postsList)
+            // Add Click Events for Each Image:
+            addImageClickEvents()}
+            catch(error){console.error('Error Populating Page.', error)}}
 // Add Click Events to Images:
 function addImageClickEvents() {const images = document.querySelectorAll('.image-grid img');
-    images.forEach(img => {img.addEventListener('click', function(){
-                                Caption.textContent='';
-                                Modal.style.display='block';
-                                Image.src          = this.src;
-                                const article      = this.closest('article');
-                                const description  = article ? article.dataset.description:'';
-                                const caption      = description || this.alt;
-                                Caption.innerHTML  =`<p>${caption}</p>`})})}
+                images.forEach(img => {img.addEventListener('click', function(){
+                                   Caption.textContent='';
+                                   Modal.style.display='block';
+                                   Image.src          = this.src;
+                                   const article      = this.closest('article');
+                                   const description  = article ? article.dataset.description:'';
+                                   const caption      = description || this.alt;
+                                   Caption.innerHTML  =`<p>${caption}</p>`})})}
 // Close Modal Event:
-Close.addEventListener('click', function(){Modal.style.display ='none'});
+Close.addEventListener(   'click', function(   ){Modal.style.display='none'});
 // Close Modal Clicking OutSide of It:
 window.addEventListener(  'click', function(event){if(event.target === Modal){Modal.style.display='none'}});
 // Call Search & DisPlay Function When Loading Page:
