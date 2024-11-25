@@ -1,4 +1,12 @@
-import fetchImages from './fetchAPI.js';
+async function e() {
+    try {
+        let e = await fetch('https://instabyte-743700410723.us-east5.run.app/posts');
+        return await e.json()
+    } catch (e) {
+        console.error('Erro ao buscar dados:', e)
+    }
+}
+// import fetchImages from './fetchAPI.js';
 const modal        = document.getElementById('modal')    ;
 const modalImg     = document.getElementById('modal-img');
 const captionText  = document.getElementById('caption')  ;
