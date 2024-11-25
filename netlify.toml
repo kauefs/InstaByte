@@ -1,0 +1,9 @@
+[[headers]]
+  for = '/*' # you can configure the correct paths here
+  [headers.values]
+    access-control-allow-origin='https://instabyte-743700410723.us-east5.run.app/posts'
+[[redirects]]
+  force =  true
+  from  ='/scripts/x.js'
+  status=   200
+  to    ='https://instabyte-743700410723.us-east5.run.app/posts'
