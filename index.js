@@ -1,9 +1,9 @@
-// async function fetchImages(){try{const response = await fetch(process.env.API);
+async function fetchImages(){try{const response = await fetch(process.env.API);
 // async function fetchImages(){try{const response = await fetch('https://instabyte-743700410723.us-east5.run.app/posts');
-//                                  const   data   = await      response.json(      );
-//                                  return  data}
-//                                  catch (error){console.error('Error Loading Data:', error)}}
-import fetchImages from './fetchAPI.js';
+                                 const   data   = await      response.json(      );
+                                 return  data}
+                                 catch (error){console.error('Error Loading Data:', error)}}
+// import fetchImages from './fetchAPI.js';
 const Modal        = document.getElementById('modal'    );
 const Image        = document.getElementById('modal-img');
 const Caption      = document.getElementById('caption'  );
