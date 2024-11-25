@@ -1,5 +1,3 @@
-async (event, context) => {const response={statusCode:     200,
-                                              headers:{'Access-Control-Allow-Origin':'https://instabyte-743700410723.us-east5.run.app/posts'}};
 // async function fetchImages(){try{const response = await fetch(process.env.API);
 async function fetchImages(){try{const response = await fetch('https://instabyte-743700410723.us-east5.run.app/posts');
                                  const   data   = await      response.json(      );
