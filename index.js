@@ -1,11 +1,6 @@
-async function e() {
-    try {
-        let e = await fetch('https://instabyte-743700410723.us-east5.run.app/posts');
-        return await e.json()
-    } catch (e) {
-        console.error('Erro ao buscar dados:', e)
-    }
-}
+async function fetchImages(){try{let fetchImages = await fetch('https://instabyte-743700410723.us-east5.run.app/posts');
+                                 return await e.json()}
+                                    catch (fetchImages){console.error('Error Fetching Images:', fetchImages)}}
 // import fetchImages from './fetchAPI.js';
 const modal        = document.getElementById('modal')    ;
 const modalImg     = document.getElementById('modal-img');
@@ -14,6 +9,7 @@ const closeBtn     = document.querySelector('.close')    ;
 modal.style.display='none';
 const imageGrid = document.querySelector('.image-grid');
 // Search & DisPlay EndPoint Data:
+// async function displayImages(){const data = await fetchImages();
 async function displayImages(){const data = await fetchImages();
     try {const postsList = data.map(item => {return `
         <article data-description='${item.description}'>
