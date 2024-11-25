@@ -1,4 +1,4 @@
-async function fetchImages(){try{const response = await fetch(process.env.URL);
+async function fetchImages(){try{const response = await fetch(process.env.API);
                                  const   data   = await      response.json(      );
                                  return  data}
                                  catch (error){console.error('Error Loading Data:', error)}}
