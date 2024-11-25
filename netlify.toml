@@ -6,4 +6,4 @@
 [[headers]]
   for   ='/*'
     [headers.values]
-    Access-Control-Allow-Origin='*'
+    Access-Control-Allow-Origin='https://instabyte-743700410723.us-east5.run.app/posts'
