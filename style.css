@@ -167,8 +167,8 @@ body {     font-family:Verdana, sans-serif;
                                                                 color:var(--primary-color);
                                                                 font-weight:500}}
 /*classes*/
-.center  {text-align:center;}
-footer   {font-size:smaller;color:#F0F0F0;align-items:center;justify-content:center;}
+.center  { text-align:center;}
+footer   {  font-size:smaller;color:#F0F0F0;align-items:center;justify-content:center;}
 p#bold   {font-weight:bold;}
 span#bold{font-weight:bold;}
 span#foot{font-family:Georgia,serif;font-weight:bold;text-decoration:underline;text-decoration-color:#0065FF;}
